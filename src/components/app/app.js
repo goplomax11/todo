@@ -14,9 +14,9 @@ export default class App extends React.Component{
 
   state ={
     todoData : [
+      this.createTodoItem('Wake Up'),
       this.createTodoItem('Drink Coffee'),
-      this.createTodoItem('Make Awesome App'),
-      this.createTodoItem('Have a lunch')
+      this.createTodoItem('Learn React')
     ],
     term: '',
     filter : 'all'
@@ -96,9 +96,7 @@ export default class App extends React.Component{
   }
 
   onSearchChange = (term) =>{
-    this.setState({
-      term:term
-    })
+    this.setState({term})
   }
 
   onFilterChange = (filter) =>{
